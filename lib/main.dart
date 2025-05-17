@@ -1,15 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/firstscreen.dart';
-import 'package:flutter_application_1/home/home_screen/home_page.dart';
+import 'package:flutter_application_1/add_item/item_model.dart';
+import 'package:flutter_application_1/dashboard/dashboard_screen.dart';
+import 'package:flutter_application_1/add_item/add_item_screen.dart';
+import 'package:flutter_application_1/details/details_screen/details_page.dart';
 import 'package:flutter_application_1/profile/user_model.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(create: (context)=> UserModel(),
-    child:const MyApp() ,
-    )
-    );
+    MultiProvider(
+
+      providers: [
+
+    ChangeNotifierProvider(
+      create: (context)=> UserModel(),),
+        ChangeNotifierProvider(
+          create: (context)=> ItemModel(),),
+
+
+      ]
+    , child:const MyApp()
+    ));
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +35,7 @@ class MyApp extends StatelessWidget {
         
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
-      home: MyHomePage(),
+      home: DashboardScreen(),
     );
   }
 }
