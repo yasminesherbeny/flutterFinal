@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/add_item/item_model.dart';
-import 'package:flutter_application_1/dashboard/dashboard_screen.dart';
-import 'package:flutter_application_1/add_item/add_item_screen.dart';
-import 'package:flutter_application_1/details/details_screen/details_page.dart';
+
+
+
 import 'package:flutter_application_1/profile/user_model.dart';
 import 'package:provider/provider.dart';
+
+import 'dashboard/nav_bar.dart';
+import 'favorite/favorite_model.dart';
 
 void main() {
   runApp(
@@ -16,6 +19,8 @@ void main() {
       create: (context)=> UserModel(),),
         ChangeNotifierProvider(
           create: (context)=> ItemModel(),),
+        ChangeNotifierProvider(
+          create: (context)=> FavoriteModel(),),
 
 
       ]

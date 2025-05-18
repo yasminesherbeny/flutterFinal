@@ -5,6 +5,7 @@ import 'package:flutter_application_1/add_item/item_model.dart';
 import 'package:flutter_application_1/details/details_screen/details_page.dart';
 import 'package:flutter_application_1/add_item/add_item_screen.dart';
 import 'package:provider/provider.dart';
+import '../favorite/favorite_model.dart';
 import '../profile/profile_page/profile_page.dart';
 import '../profile/user_model.dart';
 
@@ -60,8 +61,14 @@ class DashboardScreen extends StatelessWidget {
              Row(
                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                children: [
-                 Text(items.items[index].title),
-                 IconButton(onPressed: (){}, icon: Icon(Icons.favorite))
+                 Text(items.items[index].title), Provider.of<FavoriteModel>(context, listen: false).isFavorite(items.items[index])
+                 //IconButton(onPressed: (){
+                  // Provider.of<FavoriteModel>(context , listen :false).add(items.items[index]);
+
+
+
+                // },
+                 // icon: Icon(Icons.favorite))
                ],
              )
 

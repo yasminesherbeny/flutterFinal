@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutterfinal/favorite/favorite_screen.dart';
 
+import '../favorite/favorite_screen.dart';
 import 'dashboard_screen.dart';
 
 
@@ -26,7 +26,7 @@ class _NavBarState extends State<NavBar> {
       body: [
         DashboardScreen(),
         FavoriteScreen(),
-        Favorite()
+
 
       ][_selectedIndex],
 
