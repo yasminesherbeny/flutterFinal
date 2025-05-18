@@ -45,7 +45,7 @@ class _AdditemScreenState extends State<AdditemScreen> {
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image:AssetImage("assets/tree.jpg")),
+            image:AssetImage("assets/tree.jpg" )),
         ),
         child: Consumer<ItemModel>(
           builder: (context , itemModel , child ) =>

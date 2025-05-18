@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_1/profile/profile_page/profile_page.dart';
+import 'package:flutter_application_1/quote/quote_screen.dart';
 
 import '../favorite/favorite_screen.dart';
 import 'dashboard_screen.dart';
@@ -26,6 +28,8 @@ class _NavBarState extends State<NavBar> {
       body: [
         DashboardScreen(),
         FavoriteScreen(),
+        ProfilePage(),
+        QuoteScreen(),
 
 
       ][_selectedIndex],
@@ -58,6 +62,7 @@ class _NavBarState extends State<NavBar> {
             NavigationDestination(icon: Icon(Icons.dashboard), label: "dashboard"),
             NavigationDestination(icon: Icon(Icons.favorite), label: "favorite"),
             NavigationDestination(icon: Icon(Icons.person), label: "person"),
+             NavigationDestination(icon: Icon(Icons.format_quote), label: "Quote"),
           ]
 
 
